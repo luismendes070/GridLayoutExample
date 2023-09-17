@@ -10,8 +10,8 @@ android {
         applicationId "com.malkinfo.gridlayoutexample"
         minSdk 21
         targetSdk 34
-        versionCode 2
-        versionName "2.1"
+        versionCode 3
+        versionName "2.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -31,7 +31,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-        useIR = true
+        // useIR = true
     }
     buildFeatures {
         compose true
