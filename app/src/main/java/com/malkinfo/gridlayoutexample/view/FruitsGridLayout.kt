@@ -7,6 +7,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
@@ -59,12 +60,37 @@ fun FruitGrid(navController : NavController){
             )
         }
 
+        LazyVerticalGrid(
+            columns = GridCells.Adaptive(minSize = 30.dp)
+        ) {
+            item(span = {
+                // LazyGridItemSpanScope:
+                // maxLineSpan
+                GridItemSpan(maxLineSpan)
+            }) {
+                CategoryCard("Fruits")
+            }
+            // ...
+        }
 
     }
 
 
 
+
 }
+
+@Composable
+fun CategoryCard(s: String) {
+    println("CategoryCard.")
+    Text(
+        text ="Category Card",
+        color = Color.Black,
+        fontSize =  20.sp,
+        fontWeight = FontWeight.Bold
+    )
+}
+
 
 @Composable
 fun FruitDataGridItem(data:FruitsData,navController :NavController){
