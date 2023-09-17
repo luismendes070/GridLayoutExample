@@ -12,8 +12,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navArgument
+// import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.google.gson.Gson
 import com.malkinfo.gridlayoutexample.model.FruitsData
 import com.malkinfo.gridlayoutexample.ui.theme.GridLayoutExampleTheme
